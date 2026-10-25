@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="card">
+
+        <h1>🎯 QuizMaster Pro</h1>
+        <p class="subtitle">Test Your Knowledge & Challenge Yourself!</p>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter Your Name"
+        >
+
+        <select id="category">
+            <option value="html">HTML Quiz</option>
+            <option value="css">CSS Quiz</option>
+            <option value="javascript">JavaScript Quiz</option>
+            <option value="gk">General Knowledge</option>
+        </select>
+
+        <button id="start-btn">
+            🚀 Start Quiz
+        </button>
+
+        <button id="theme-btn">
+            🌙 Dark Mode
+        </button>
+
+        <div class="high-score">
+            🏆 High Score:
+            <span id="high-score">0</span>
+        </div>
+
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="card hide">
+
+        <div class="top-bar">
+
+            <span id="question-count">
+                Question 1/10
+            </span>
+
+            <span id="timer">
+                ⏳ 15
+            </span>
+
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- Question -->
+        <h2 id="question">
+            Question will appear here
+        </h2>
+
+        <!-- Options -->
+        <div id="options">
+
+        </div>
+
+        <!-- Lifelines -->
+        <div class="lifeline-container">
+
+            <button id="fifty-btn">
+                50-50
+            </button>
+
+            <button id="skip-btn">
+                Skip
+            </button>
+
+        </div>
+
+        <button id="next-btn" disabled>
+            Next Question ➡
+        </button>
+
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="card hide">
+
+        <h1>🎉 Quiz Completed!</h1>
+
+        <p id="user-result"></p>
+
+        <h2 id="score"></h2>
+
+        <div id="badge"></div>
+
+        <div class="analytics">
+
+            <p id="correct-count"></p>
+
+            <p id="wrong-count"></p>
+
+            <p id="accuracy"></p>
+
+        </div>
+
+        <button id="restart-btn">
+            🔄 Restart Quiz
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
